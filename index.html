@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@1&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- CSS de Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <title>Sailor Moon</title>
+        <style>
+            body {
+                font-family: "Gentium Book Plus", serif;
+            }
+            nav {
+                position: relative;
+                display: flex;
+            }
+            p {
+                font-family: "Gentium Book Plus", serif;
+                font-size: 20px;
+            }
+            .contnav {
+                background-color: #eb84b3;
+                color: #ebabbb;
+            }
+            .overlay {
+                font-family: "Stick No Bills", sans-serif;
+                position: absolute;
+                z-index: 12;
+                color: #ff6e88;
+                left: 50%;
+                padding-top: 20%;
+                text-shadow: 2px 2px 5px black;
+            }
+            h1 {
+                font-size: 3.5rem;
+                font-family: 'Merriweather', serif;
+                color: white;
+            }
+            h2 {
+                font-family: "Gentium Book Plus", serif;
+                font-size: 80px;
+            }
+            h3 {
+                font-family: "Gentium Book Plus", serif;
+                color: white;
+                font-size: 30px;
+            }
+            h4 {
+                font-family: "Gentium Book Plus", serif;
+                color: #eb84b3;
+                font-size: 25px;
+            }
+            .uno {
+                background-color: #f2f2f2;
+            }
+            .im {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .fondo-claro {
+                background-color: #f2f2f2;
+            }
+            .accordion-button:not(.collapsed) {
+                background: #eb84b3;
+                color: #0d000d;
+                font-weight: 600;
+            }
+            .en-fondo-negro {
+                color: white;
+                background-color: #eb84b3;
+            }
+            .nav-pills .nav-link.active,
+            .nav-pills .show > .nav-link {
+                color: white;
+                background-color: #eb84b3;
+            }
+            a.nav-link {
+                color: #f2f2f2;
+            }
+            span.fs-4 {
+                color: #212529;
+            }
+            a.nav-link:hover {
+                color: #eb84b3;
+            }
+            footer {
+                background-color: #eb84b3;
+                color: #f2f2f2;
+                padding-top: 3%;
+                padding-bottom: 3%;
+            }
+            p.fo {
+                font-size: 15px;
+            }
+            a {
+                text-decoration: none;
+                color: #f2f2f2;
+            }
+            a:hover {
+                color: #eb84b3;
+            }
+            @media (max-width: 700px) {
+                h1 {
+                    font-size: 25px;
+                }
+                h3 {
+                    font-size: 15px;
+                }
+                h2 {
+                    font-size: 30px;
+                }
+            }
+            a.stretched-link {
+                color: #87003e;
+            }
+            a.nav-link {
+                color: white;
+            }
+        </style>
+    </head>
+    <meta name="description" content="En esta página encontrarás todo lo relacionado a sailor moon de los noventa" />
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <div class="sticky-top contnav">
+            <nav class="container d-flex flex-wrap justify-content-center py-3">
+                <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #f2f2f2;"></svg>
+                    <span class="fs-4"> Inicio</span>
+                </a>
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page"style="color:#360114">Temporadas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page"style="color:#360114">Naoko Takeuchi</a></li>
+                </ul>
+            </nav>
+        </div>
+        <header>
+            <div class="container-fluid g-0">
+                <div class="overlay">
+                    <div style="position: relative; left: -50%;">
+                        <h1 class="text-center">Pretty Soldier Sailor Moon</h1>
+                        <h2 class="text-center"style="color:white; font-size: 30px;">Web sobre la serie Sailor Moon de los años 90</h2>
+                    </div>
+                </div>
+                <div id="probandoCarrusel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/sailormoon.webp" class="d-block w-100" alt="Primera portada, contiene una imagen de Sailor Moon" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/sailormoonr.webp" class="d-block w-100" alt="Segunda portada, contiene una imagen de Sailor Moon R" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/sailormoons.webp" class="d-block w-100" alt="Tercera portada, contiene una imagen de Sailor Moon S" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/sailormoonsupers.webp" class="d-block w-100" alt="cuarta portada, contiene una imagen de Sailor Moon Super S" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/18232.webp" class="d-block w-100" alt="cuarta portada, contiene una imagen de Sailor Moon Stars" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#probandoCarrusel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#probandoCarrusel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="uno">
+            <div class="container py-4" id="1">
+                <div class="container p-5">
+                    <h2 class="text-end"><strong>Sailor Moon</strong></h2>
+                </div>
+                <div class="row align-items-md-stretch">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <p>
+                                Pretty Soldier Sailor Moon (美少女戦士セーラームーン Bishōjo Senshi Sērā Mūn), conocida como Sailor Moon. El mundo ficticio en el que se desarrolla la trama de Sailor Moon está centrado en el concepto de
+                                "Sailor Senshi",​ una especie de justiciera con uniforme de "sailor fuku" (traje de marinero) que constituye el arquetipo de heroína más característico de la serie. Más allá de su nombre y estilo de
+                                vestimenta, sin embargo, las Sailor Senshi no presentan ningún otro rasgo en común con ese epíteto; ya que se muestra que todas ellas luchan contra el mal más bien por medio de su "poder estelar": una
+                                facultad mágica y personal, procedente de un exclusivo vínculo místico (que sólo cada una de ellas posee) respecto a un planeta o astro en específico.​ Heroínas típicas del género magical girl, generalmente
+                                poseen dos identidades: la civil y la guerrera, siendo la conexión entre ambas a veces de carácter secreto.
+                            </p>
+                            En su primera misión debe enfrentarse a una especie de demonio parte del Reino Oscuro, un grupo de villanos que pretenden sumergir al mundo en las tinieblas. Uno de ellos intenta esclavizar a las mujeres de la
+                            ciudad al suplantar a la madre de su amiga, una vendedora de joyas. Si bien Usagi consigue usar sus habilidades como "Sailor Moon" para derrotar a la villana, ella es auxiliada por un misterioso héroe llamado
+                            Tuxedo Mask; de quien la muchacha se acaba enamorando para el pesar de Luna. Esta le advierte que la misión de Usagi es encontrar a otras Sailor Senshi así como a la figura reencarnada de la Princesa de la Luna,
+                            junto con una poderosa piedra mística llamada el Cristal de Plata, para derrotar a los malvados seres que acechan a la Tierra.
+                            <p>
+                                <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    Más información
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <img src="img/caratulasailormoon.webp" class="im" style="width: 80%;" alt="sailor moon dvd" />
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body" style="padding: 0%;">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Más sobre la historia
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Usagi Tsukino es una adolescente japonesa ordinaria, perezosa, algo torpe y llorona cuya vida cambia para siempre cuando ayuda y se encuentra una gata negra con una marca de Luna creciente en la
+                                        frente, de nombre "Luna", quien le revela que está destinada a convertirse en una Sailor Senshi con poderes mágicos que debe enfrentarse a las fuerzas del mal. Con ayuda de un amuleto mágico, Usagi es
+                                        capaz de transformarse en "Sailor Moon", una hermosa y generosa guerrera que defiende a los indefensos en el nombre de la luna.61​
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Personajes principales
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/serena1.webp" style="width: 100%;" alt="Se muestra el aspecto del personaje principal" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Usagi Tsukino</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/ami11.webp" style="width: 100%;" alt="Se muestra el aspecto de ami" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Ami Mizuno</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/rei11.webp" style="width: 100%;" alt="Se muestra el aspecto de rei" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Rei Hino</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/mako.webp" style="width: 100%;" alt="Se muestra el aspecto de makoto" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Makoto Kino</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/mina.webp" style="width: 100%;" alt="Se muestra el aspecto de mina" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Minako Aino</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/tuxedo.webp" style="width: 100%;" alt="Se muestra al aspecto de Mamoru" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Mamoru Chiba</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/malos2.webp" style="width: 100%;" alt="Se muestra el aspecto de jaedite y nephrite" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Jadeite y Nephrite</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/malos1.webp" style="width: 100%;" alt="Se muestra el aspecto de Kunzite y Zoisite" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Kunzite y Zoisite</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/beryl.webp" style="width: 100%;" alt="Se muestra el aspecto de la Reina Beryl" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Reina Beryl</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid g-0">
+            <video playsinline loop autoplay muted class="w-100">
+                <source src="assets/sailormoon1.mp4" type="video/mp4" />
+                <source src="assets/sailormoon1.webm" type="video/webm" />
+            </video>
+            <div class="dos en-fondo-negro">
+                <div class="container py-4" id="2">
+                    <div class="container p-5">
+                        <h2 class="text-start"><strong>Sailor Moon R</strong></h2>
+                    </div>
+                    <div class="row align-items-md-stretch">
+                        <div class="col-md-6">
+                            <div class="h-100 p-5">
+                                <img src="img/caratulasailormoonr.webp" class="im" style="width: 80%;" alt="Carátula sailor moon r" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="h-100 p-5">
+                                <p>
+                                    Días después de la derrota de Metallia, las chicas pueden reanudar sus vidas normales, mientras que Usagi y Mamoru se vuelven una pareja oficial. Sin embargo, la historia toma un nuevo giro con la
+                                    aparición de una niña apodada "Chibiusa".Esta tiene un inexplicable conocimiento acerca del Cristal de Plata, razón por la cual las chicas desconfían al principio de ella; mientras que la niña se las
+                                    arregla para quedarse a vivir en la casa de Usagi, fingiendo ser una prima suya. Además, ella es perseguida por un nuevo grupo de enemigos, el grupo Black Moon. Esto acaba por despertar en Mamoru un
+                                    extraño impulso de protegerla, lo que llena la mente de Usagi de inseguridades y celos. Mientras tanto, el grupo "Black Moon" envía a cuatro servidoras, las Hermanas de la Persecución, a atacar a la gente
+                                    de Tokio. Cuando las jóvenes heroínas logran sorprenderlas en medio de sus fechorías, otro extraño llamado Rubeus llega para ayudar a las hermanas; secuestrando sucesivamente a tres de las amigas de
+                                    Usagi. Empieza así una serie de batallas que termina con la muerte de las Cuatro hermanas de la persecución y con las desapariciones de Sailor Mars, Sailor Mercury y Sailor Jupiter a manos de Rubeus.
+                                    Desesperados por los recientes sucesos, y sin ninguna respuesta e información sobre ellos, Usagi, Minako y Mamoru saben posteriormente la verdad de todo el asunto por medio de la única persona que conoce
+                                    la identidad de los recién llegados: Chibiusa. La niña, gracias a la ayuda de su amiga "Sailor Pluto", acaba por teletransportar al grupo de Usagi al lugar de donde ella proviene; el mismo del cual
+                                    provienen los nuevos malhechores: el mundo del futuro en el siglo XXX.
+                                </p>
+                                <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    <p>Más información</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body" style="padding: 0%;">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Más sobre la historia
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="color: #0d000d;">
+                                        <div class="accordion-body">
+                                            Un nuevo combate toma lugar cuando deben hacer frente a Zafiro, Diamante y Black Lady. Sin embargo, todo impulso que tienen para luchar se desvanece cuando ven que Black Lady es Chibiusa,
+                                            transformada en una villana por la magia del Gran Sabio, y asistida también por el hechizado Tuxedo Mask. En Tokio de Cristal, las Sailor Senshi descubren la verdadera identidad del Gran Sabio.
+                                            Conocido como el "Fantasma de la Muerte", fue el primer criminal en llevar la marca de Black Moon y en ser desterrado a Némesis por la propia Neo Reina Serenity, por haber corrompido los corazones
+                                            de los habitantes, y resurgir los asesinatos y masacres.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Nuevos personajes
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="color: #0d000d;">
+                                        <div class="accordion-body">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                <div class="col">
+                                                    <div class="card shadow-sm">
+                                                        <img src="img/blackmoon1.webp" style="width: 100%;" alt="Se muestra a Prince Demand, Blue Saphir y Green Esmeraude" />
+                                                        <div class="card-body">
+                                                            <p class="text-center"><strong>Prince Demand, Blue Saphir y Green Esmeraude</strong></p>
+                                                            <div class="d-flex justify-content-between align-items-center"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="card shadow-sm">
+                                                        <img src="img/wisemanyrubeus.webp" style="width: 100%;" alt="Se muestra a Wiseman y Crimson Rubeus" />
+                                                        <div class="card-body">
+                                                            <p class="text-center"><strong>Wiseman y Crimson Rubeus</strong></p>
+                                                            <div class="d-flex justify-content-between align-items-center"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="card shadow-sm">
+                                                        <img src="img/hermanasAyakashi.webp" style="width: 100%;" alt="Se muestra a las hermanas ayakashi" />
+                                                        <div class="card-body">
+                                                            <p class="text-center"><strong>Hermanas Ayakashi</strong></p>
+                                                            <div class="d-flex justify-content-between align-items-center"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="card shadow-sm">
+                                                        <img src="img/blacklady11.webp" style="width: 100%;" alt="Se muestra a black lady" />
+                                                        <div class="card-body">
+                                                            <p class="text-center"><strong>Black Lady</strong></p>
+                                                            <div class="d-flex justify-content-between align-items-center"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="card shadow-sm">
+                                                        <img src="img/chibiusa11.webp" style="width: 100%;" alt="Se muestra a Chibiusa" />
+                                                        <div class="card-body">
+                                                            <p class="text-center"><strong>Chibiusa</strong></p>
+                                                            <div class="d-flex justify-content-between align-items-center"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid g-0">
+            <img src="img/logooo.webp" style="width: 100%;" alt="Logo Sailor Moon S" />
+        </div>
+        <div class="tres">
+            <div class="container py-4" id="3">
+                <div class="container p-5">
+                    <h2 class="text-end"><strong>Sailor Moon S</strong></h2>
+                </div>
+                <div class="row align-items-md-stretch">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <p>
+                                Tras la derrota de Black Moon, las Sailor Senshi tienen la oportunidad de volver a sus vidas comunes y corrientes, mientras cuidan e instruyen a Chibiusa. Entonces sus sospechas son despertadas por una serie
+                                de episodios extraños, protagonizados por los alumnos de una escuela llamada el Colegio Infinito ("Mugen"). Los alumnos de ese colegio parecen alterarse, mientras sus cuerpos parecen estar controlados por
+                                seres monstruosos. Al estudiar a fondo el asunto, se revela que son los propios alumnos los que están siendo sustituidos por monstruos;80​81​ lo que provoca que el destino de la humanidad recaiga una vez más
+                                en manos de las Sailor Senshi. En Tokio, por otra parte, hay un gran entusiasmo por el regreso de un dúo de excelentes alumnas; una aplicada deportista y corredora de autos Haruka Ten'ō y la aclamada
+                                violinista Michiru Kaiō. Estas no tardan en establecer contacto con las protagonistas y Mamoru, y pronto parecen desarrollar un especial interés.​ Chibiusa entabla una gran amistad con la hija del director
+                                del Colegio Infinito, Hotaru Tomoe, una chica introvertida y apacible; con quien pasa varios momentos y comparte secretos. Sin embargo el padre de Hotaru, el Profesor Tomoe, sirve a un ser alienígena llamado
+                                Faraón 90; quien se propone adueñarse de la Tierra. La meta de este ser es la de cubrir al planeta Tierra y asimilarlo dentro de sí mismo como su nueva morada.
+                            </p>
+                            <p>
+                                <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    Más información
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <img src="img/caratulaSMs.webp" class="im" style="width: 80%;" alt="Caratula de Sailor Moon S" />
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body" style="padding: 0%;">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Más sobre la historia
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        A través de los sueños, todo el grupo es advertido por una voz que deben reunir los talismanes. A su vez, Mamoru y Usagi tienen visiones difusas sobre el fin del mundo y un ser misterioso,
+                                        desconociendo si se trata de un Mesías o un enemigo. Las investigaciones respecto a las actividades ocultas en el colegio Infinito pronto enfrentan a las justicieras sucesivamente con las Brujas 5,
+                                        que estudian o trabajan allí realizando experimentos para los alienígenas y recolectando almas. Inesperadamente, las jóvenes se encuentran también con otras dos Sailor Senshi; unas desconocidas
+                                        llamadas "Sailor Uranus" y "Sailor Neptune"; quienes resultan ser las célebres Haruka y Michiru. Posteriormente, éstas se reúnen con la recién reencarnada Sailor Pluto, "Setsuna Meiō", y las tres
+                                        forman el equipo de las Sailor Senshi del Sistema Solar Externo, para vencer a las restantes Brujas 5 y a la secta a la que ellas sirven, los "Death Busters". Tras encontrar los talismanes que
+                                        evitarían la destrucción de la tierra las tres nuevas sailors explican que ellas nunca debían reunirse, ya que su reunión convocaría el inminente despertar de Sailor Saturn. Por lo que el haber podido
+                                        reencarnar en el Planeta Tierra, representaba paradójicamente un peligro. Le avisan al grupo que, de la misma forma que ellas reencarnaron, también lo haría Sailor Saturn, quien se hallaba dormida en
+                                        Hotaru Tomoe.Ante la amenaza de Sailor Chibi Moon se dirige rápidamente a la casa de Hotaru para protegerla pero esta última es poseída por Mistress 9; entidad alienígena que toma el control del
+                                        cuerpo y espíritu de Hotaru para arrebatarle salvajemente el alma y el cristal de plata de Chibiusa, dejándola en un estado cercano a la muerte y así comienza una nueva batalla contra una nueva
+                                        enemiga.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Nuevos personajes
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                        <div class="col">
+                                            <div class="card shadow-sm">
+                                                <img src="img/hotaru1.webp" style="width: 100%;" alt="Se muestra la apariencia de Hotaru" />
+                                                <div class="card-body">
+                                                    <p class="text-center"><strong>Hotaru Tomoe</strong></p>
+                                                    <div class="d-flex justify-content-between align-items-center"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card shadow-sm">
+                                                <img src="img/plutooo.webp" style="width: 100%;" alt="Se muestra la apariencia de Setsuna Meio" />
+                                                <div class="card-body">
+                                                    <p class="text-center"><strong>Setsuna Meio</strong></p>
+                                                    <div class="d-flex justify-content-between align-items-center"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card shadow-sm">
+                                                <img src="img/uranusyneptune.webp" style="width: 100%;" alt="Se muestra la apariencia de Haruka y Michiru " />
+                                                <div class="card-body">
+                                                    <p class="text-center"><strong>Haruka y Michiru</strong></p>
+                                                    <div class="d-flex justify-content-between align-items-center"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card shadow-sm">
+                                                <img src="img/kaoliniteytomoe.webp" style="width: 100%;" alt="Se muestra la apariencia del Porfesor Tomoe y kaolinite" />
+                                                <div class="card-body">
+                                                    <p class="text-center"><strong>Profesor Tomoe y Kaolinite</strong></p>
+                                                    <div class="d-flex justify-content-between align-items-center"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card shadow-sm">
+                                                <img src="img/mistress999.webp" style="width: 100%;" alt="Se muestra la apariencia de Mistress9" />
+                                                <div class="card-body">
+                                                    <p class="text-center"><strong>Mistress9</strong></p>
+                                                    <div class="d-flex justify-content-between align-items-center"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card shadow-sm">
+                                                <img src="img/brujas12.webp" style="width: 100%;" alt="Se muestra la apariencia de Eudial y Mimete" />
+                                                <div class="card-body">
+                                                    <p class="text-center"><strong>Eudial y Mimete</strong></p>
+                                                    <div class="d-flex justify-content-between align-items-center"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card shadow-sm">
+                                                <img src="img/brujas123.webp" style="width: 100%;" alt="Se muestra la apariencia de Tellu, Viluy y Cyprine" />
+                                                <div class="card-body">
+                                                    <p class="text-center"><strong>Tellu, Viluy y Cyprine</strong></p>
+                                                    <div class="d-flex justify-content-between align-items-center"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid g-0">
+            <video playsinline loop autoplay muted class="w-100">
+                <source src="assets/video.mp4" type="video/mp4" />
+                <source src="assets/video.webm" type="video/webm" />
+            </video>
+            <div class="dos en-fondo-negro">
+                <div class="container py-4" id="2">
+                    <div class="container p-5">
+                        <h2 class="text-start"><strong>Sailor Moon Super S</strong></h2>
+                    </div>
+                    <div class="row align-items-md-stretch">
+                        <div class="col-md-6">
+                            <div class="h-100 p-5">
+                                <img src="img/SMsuperS.webp" class="im" style="width: 80%;" alt="Carátula sailor moon super s" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="h-100 p-5">
+                                <p>
+                                    Durante el eclipse, tanto Usagi como Chibiusa y Mamoru experimentan algo inquietante: los tres ven inesperadamente ante sí a un Pegaso, que les pide ayuda, antes de esfumarse en la nada. Luego, ellos y
+                                    sus compañeras ven cómo una embarcación espectral, salida del eclipse, baja por los aires hasta la Tierra, para de inmediato desaparecer. Las visiones solo duran un segundo; pero, al mirar a su alrededor,
+                                    advierten que solo ellos parecen haber visto lo que acaba de ocurrir. Al saber de la llegada de un nuevo circo, el "Circo Dead Moon", formado por la extraña tripulación fantasmal que antes vieran,
+                                    resuelven mantener vigilado a ese grupo. Gracias a sus poderes psíquicos, Rei percibe un augurio de inminente peligro. El grupo recuerda a Haruka, Michiru y Setsuna, deseosas de volverse a encontrar. De
+                                    pronto, las Sailor Senshi son atacadas por un extraño trío, el Trío de amazonas, mientras que Tuxedo Mask (Mamoru) comienza a sufrir una enfermedad sobrenatural en sus pulmones. Las jóvenes empiezan a
+                                    sospechar que esto está conectado con el circo Dead Moon. Sailor Mars, Mercury y Jupiter derrotan al trío tras obtener nuevos poderes junto con sus Cristales Sailor: Sailor Mars obtiene el suyo de Phobos
+                                    y Deimos; Mercury y Jupiter, por otra parte, reciben los suyos tras conocer a una especie de extensión o reflejo de ellas mismas, sus guardianas espirituales Guardiana Mercury y Guardiana Júpiter.
+                                </p>
+                                <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    <p>Más información</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body" style="padding: 0%;">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Más sobre la historia
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="color: #0d000d;">
+                                        <div class="accordion-body">
+                                            Luego del enfrentamiento entre Sailor Júpiter y el cuarteto amazonas, Sailor ChibiMoon es llamada por Helios en busca de su ayuda, ya que las pesadillas o lémures atacan a Mamoru; por lo que
+                                            Sailor Moon, ChibiMoon y Júpiter se dirigen allí. Una vez derrotadas dichas pesadillas, Helios les explica que Mamoru y él sufren una maldición. Él les pide ayuda para acabar con aquella
+                                            maldición, establecida por la Reina Nehrenia, una antigua enemiga del Milenio de Plata, del reino de Dead Moon; que había logrado expandir su influencia para vengarse de los descendientes del
+                                            Reino Lunar. Su propósito es apoderarse del Cristal de Plata para gobernar el Universo completo. A su vez, explica que su cuerpo fue convertido en un pegaso a causa de la maldición, por lo que
+                                            mediante la utilización de la proyección astral, ha podido salir de su cuerpo para comunicarse con ellos.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Nuevos personajes
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="color: #0d000d;">
+                                        <div class="accordion-body">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                <div class="col">
+                                                    <div class="card shadow-sm">
+                                                        <img src="img/nehereniayzirconia.webp" style="width: 100%;" alt="Se muestra a la Reina Neherenia y Zirconia" />
+                                                        <div class="card-body">
+                                                            <p class="text-center"><strong>Reina Neherenia y Zirconia</strong></p>
+                                                            <div class="d-flex justify-content-between align-items-center"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="card shadow-sm">
+                                                        <img src="img/trioycuarteto.webp" style="width: 100%;" alt="Se muestra al Trio y al Cuarteto Amazonas" />
+                                                        <div class="card-body">
+                                                            <p class="text-center"><strong>Trio y Cuarteto Amazonas</strong></p>
+                                                            <div class="d-flex justify-content-between align-items-center"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="card shadow-sm">
+                                                        <img src="img/helios.webp" style="width: 100%;" alt="Se muestra a Helios" />
+                                                        <div class="card-body">
+                                                            <p class="text-center"><strong>Helios</strong></p>
+                                                            <div class="d-flex justify-content-between align-items-center"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uno">
+            <div class="container py-4" id="1">
+                <div class="container p-5">
+                    <h2 class="text-end"><strong>Sailor Moon Stars</strong></h2>
+                </div>
+                <div class="row align-items-md-stretch">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <p>
+                                Con el reinicio de clases, las jóvenes comienzan a suspirar por un nuevo grupo musical: los Three Lights; grupo formado por los famosos Seiya, Taiki y Yaten. Para Usagi las cosas no parecen del todo felices;
+                                ya que su novio, Mamoru, se va de viaje rumbo a los Estados Unidos por todo un año, para realizar un posgrado. También su futura hija, Chibiusa, acaba por regresar al siglo XXX, lo que deja a Usagi con una
+                                gran sensación de soledad. En el concierto sucede algo inesperado: una villana surge de entre el público, identificándose como una Sailor Senshi, Sailor Iron Mouse. Tras atacar a los Three Ligths, afirma que
+                                ha venido para robar los Cristales Sailor (es decir, las fuentes de poder) de "otras" Sailor Senshi. Cuando Sailor Moon y los suyos la enfrentan, aparecen otras tres misteriosas guerreras. Ellas son las tres
+                                Sailor Starlights: "Sailor Star Fighter", "Sailor Star Maker" y "Sailor Star Healer". Estas acaban con la intrusa para luego desaparecer. Haruka, intentando proteger a Usagi y advertir al resto del grupo,
+                                comenta que cree que las Sailor Starlights y los Three Lights son, de alguna manera, las mismas personas.94​ Ante la aparición de todas estas nuevas guerreras, el grupo de Usagi decide comenzar a investigar.
+                                Al volver a su casa, Usagi encuentra allí a una niña desconocida; a quien todos en su hogar ven como un miembro de la familia. Usagi cree que la niña, Chibi Chibi, podría ser una segunda hija de la Neo Reina
+                                Serenity (contraparte de Usagi en el siglo XXX), enviada desde el futuro al igual que Chibiusa.
+                            </p>
+                            <p>
+                                <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    Más información
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <img src="img/caratulasSMstars.webp" class="im" style="width: 80%;" alt="sailor moon satrs" />
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body" style="padding: 0%;">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Más sobre la historia
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Los Three Lights descubren un incensario de Chibi Chibi, del interior del cual emerge su Princesa: la Princesa Kakyū, del planeta Kinmoku. Ella es la persona que las Sailor Starlights habían estado
+                                        buscando. Kakyū cuenta que había permanecido oculta para recuperarse de las heridas letales del ataque de Sailor Galaxia. Además, para sorpresa de Usagi y las Starlights, Chibi Chibi resulta ser
+                                        también una Sailor Senshi. Sailor Moon (Usagi), Chibi Chibi, Kakyū y las tres Sailor Starlights llegan a la estrella Zero de Sagitario, en el centro de la Vía Láctea. Kakyū explica que Sailor Galaxia
+                                        ha erigido allí su palacio para estar cerca del Caldero Galáctico, el sitio donde nacen las estrellas y semillas estelares de la galaxia, junto con los cristales Sailor. Sailor Moon comprende que
+                                        todos los seres, las estrellas e incluso ellos mismos, tienen su origen en este lugar sagrado.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Nuevos Personajes
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/seiya.webp" style="width: 100%;" alt="Se muestra el aspecto de Seiya Kou" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Seiya Kou</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/yaten.webp" style="width: 100%;" alt="Se muestra el aspecto de yaten" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Yaten Kou</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/taiki.webp" style="width: 100%;" alt="Se muestra el aspecto de Taiki Kou" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Taiki Kou</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/SailorAnimamates.webp" style="width: 100%;" alt="Se muestra el aspecto de las Sailor Animamates" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Sailor Animamates</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/princesa.webp" style="width: 100%;" alt="Se muestra el aspecto de la Princesa Kakyu" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Princesa Kakyū</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/chibichibi.webp" style="width: 100%;" alt="Se muestra el aspecto de chibichibi" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>ChibiChibi</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/galaxia.webp" style="width: 100%;" alt="Se muestra al aspecto de Sailor Galaxia" />
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Sailor Galaxia</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="container" id="Donde ver">
+            <div class="row">
+                <div class="col-12 pt-3 pb-5">
+                    <h2 class="text-center mt-5 mb-4">Donde ver la serie y películas</h2>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 pb-3">
+                        <div class="col mb-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="img/image-0-compressed.webp" style="width: 100%;" class="card-img-top" alt="sailor moon" />
+                                <div class="card-body">
+                                    <h3 class="card-title" style="color:#212529" >Sailor Moon 90's</h3>
+                                    <p class="card-text small"><a href="https://www3.animeflv.net/anime/sailor-moon" class="stretched-link">Ir a ver &rarr;</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="img/pelicula1.webp" style="width: 100%;" class="card-img-top" alt="sailor moon r" />
+                                <div class="card-body">
+                                    <h3 class="card-title" style="color:#212529" >Sailor Moon R película</h3>
+                                    <p class="card-text small"><a href="https://www.netflix.com/watch/26588007?source=35" class="stretched-link">Ir a ver &rarr;</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="img/image-4-compressed.webp" style="width: 100%;" class="card-img-top" alt="Orquideas" />
+                                <div class="card-body">
+                                    <h3 class="card-title" style="color:#212529" >Sailor Moon S película</h3>
+                                    <p class="card-text small"><a href="https://www.netflix.com/watch/80116992?source=35" class="stretched-link">Ir a ver &rarr;</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="img/pelicula3.webp" style="width: 100%;" class="card-img-top" alt="Helechos" />
+                                <div class="card-body">
+                                    <h3 class="card-title" style="color:#212529" >Sailor Moon Super S película</h3>
+                                    <p class="card-text small"><a href="https://www.netflix.com/watch/60001990?source=35" class="stretched-link">Ir a ver &rarr;</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mx-4 text-muted">
+                        Imágenes obtenidas de <a href="https://www.pinterest.es/vanessavelayane/sailor-libros-revistas/" target="_blank" class="stretched-link">Pinterest</a> e información de
+                        <a href="https://es.wikipedia.org/wiki/Sailor_Moon" target="_blank" class="stretched-link">Wikipedia</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col text-center"style="color:#360114">
+                        <small>
+                            <a href="https://github.com/sunkissedJM" target="_blank" style="color: #360114;">Tamara Sánchez</a> | 01 de Julio, 2022<br />
+                            Proyecto final <a href="https://github.com/profesorfaco/front-end"   target="_blank" style="color: #360114;">Introducción al Desarrollo Front End con HTML, CSS y JavaScript</a> | Universidad de Chile
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
